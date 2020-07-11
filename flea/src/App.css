@@ -2,20 +2,22 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.Home-logo {
+  /*height: 40vmin;*/
   pointer-events: none;
+  padding: 5% 0 5% 0;
 }
-
+/*
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .Home-logo {
+    animation: Home-logo-spin infinite 50s linear;
   }
 }
-
+*/
+*{margin: 0; padding: 0;}
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: white;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,8 +29,148 @@
 .App-link {
   color: #61dafb;
 }
+.Flea-home{
+  position: absolute;
+  left: -30%;
+  height: 40vw;
+  top: 20vh;
+  align-items: flex-end;
 
-@keyframes App-logo-spin {
+}
+.App p {
+  padding :40px;
+
+}
+
+.button{
+  width:200px;
+  background-color:#01FF00;
+  margin: auto;
+  padding:10px;
+  border-radius: 50px;
+  font-size:15px;
+  line-height:32px;
+  text-transform: uppercase;
+
+}
+.button :hover{
+  opacity: 0.50;
+  -moz-opacity: .50;
+  filter:alpha (opacity=50);
+}
+.button a{
+  color:#fff;
+  text-decoration:none;
+  padding:5px 5px 5px 0;
+}
+
+.smaller img {
+  width: 15%;
+}
+.container{
+  width: 100%;
+}
+
+.progressbar {
+  counter-reset: step ;
+}
+.progressbar li{ 
+  list-style-type: none;
+  float: left;
+  width: 33.33%;
+  position: relative;
+  text-align: center;
+}
+.progressbar li:before{
+  content: counter(step);
+  counter-increment: step;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #01FF00;
+  display: block;
+  text-align: center;
+  margin: 0 auto 10px auto;
+  border-radius: 50%;
+  background-color: #01FF00;
+}
+.progressbar li:after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #01FF00;
+  top:  15px;
+  left: -50%;
+  z-index: -1;
+}
+.progressbar li:first-child:after{
+  content: none;
+}
+
+.progressbar li.active{
+  color: #01FF00;
+
+}
+.progressbar li:active.before{
+  color: #01FF00;
+  
+}
+.progressbar li.active + li:after{
+  background-color: #01FF00;
+}
+
+.Steps{
+  margin: 4%;
+}
+.catField{
+  width:40%;
+  height:30px;
+  margin: 2% auto;
+  padding:10px;
+  border-radius: 50px;
+  font-size:15px;
+  line-height:32px;
+  display: flex;
+}
+.Categories{
+  width: 35%;
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  text-transform: uppercase;
+
+}
+
+.ActiveBtn{
+  width:100px;
+  height:auto;
+  margin: 15px auto;
+  border: 1px solid gray;
+  padding:10px;
+  border-radius: 50px;
+  font-size:15px;
+  line-height:32px;
+}
+
+.ActiveBtn:active, .ActiveBtn.active {
+  background-color:#01FF00;
+}
+.selectedLetter {
+  margin: 40px;
+    display: flex;
+    justify-content: center;
+}
+.selectedLetter h2{
+  padding: 20px;
+  border: 5px solid #01FF00;
+  border-radius: 50%;
+  width: 35px;
+}
+
+/*
+@keyframes Home-logo-spin {
   from {
     transform: rotate(0deg);
   }
@@ -36,3 +178,4 @@
     transform: rotate(360deg);
   }
 }
+*/
