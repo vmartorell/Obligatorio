@@ -1,15 +1,11 @@
 //importar todo lo necesario
 import React from 'react';
-import {
-    BrowserRouter as Router,
-    Link
-  } from "react-router-dom";
 
 function btn(text) {
     return (
-        <div className= 'button'>
+        <button className= 'button'>
         {text.name}
-        </div>
+        </button>
     );
 }
 

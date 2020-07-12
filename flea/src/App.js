@@ -17,7 +17,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedLetter: ''
+      selectedLetter: '',
     }
   }
 
@@ -25,7 +25,6 @@ class App extends React.Component {
     const letter = e.target.value;
     this.setState({ selectedLetter: letter })
   }
-
   render() {
     const { selectedLetter } = this.state;
 
@@ -42,7 +41,7 @@ class App extends React.Component {
                 Are you ready to be the next Flea! King? <br></br>
                 Play with your friends easily and have fun.
               </p>
-              <Link to="/settings" className="btn"><Button name='PLAY!' /></Link>
+              <Link to="/settings" className="btn"><Button name='PLAY!'/></Link>
             </Route>
             <Route exact path='/settings'>
               <div className='smaller'>

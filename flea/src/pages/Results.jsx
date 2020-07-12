@@ -8,10 +8,11 @@ function Results() {
         .then(function (response) {
             return response.json();
         })
+
         .then(function (responseJSON) {
             changeState(responseJSON[responseJSON.length -1]);
-            
-        });
+        })
+        ;
         }, []);
     return (
         <div>

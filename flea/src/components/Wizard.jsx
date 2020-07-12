@@ -16,27 +16,40 @@ class Wizard extends Component {
         this.state = {
             step: 1,
             //step 1
-            name: ''
+            name: '',
             //step 2
             //step 3
+            selectedLetter: ''
+
         }
     }
 
     nextStep = () => {
         const { step } = this.state;
-        if (step === 3) {
-            return (
-                <Router>
-                    <Switch>
-                        <Route to='/game' />
-                    </Switch>
-                </Router>
-            );
-        }
-        else {
-            this.setState({
-                step: step + 1
-            });
+        switch (step) {
+            case 1:
+                if (step === 1) {
+                    this.validate()
+
+                }
+            case 2:
+                if (step === 2) {
+                    this.validateLetter()
+                    /* this.setState({
+                          step: step + 1 
+                      });  */
+                }
+            case 3:
+                if (step === 3) {
+                    return (
+                        <Router>
+                            <Switch>
+                                <Route to='/game' />
+                            </Switch>
+                        </Router>
+                    );
+                }
+
         }
     };
     get nextStep() {
@@ -45,14 +58,37 @@ class Wizard extends Component {
     set nextStep(value) {
         this._nextStep = value;
     }
-    prevStep = () => {
-        const { step } = this.state;
+    /*     prevStep = () => {
+            const { step } = this.state;
+    
+            this.setState({
+                step: step - 1
+            });
+        } */
+    validate = () => {
+        const { step, name } = this.state;
+        if (name.trim() === '') {
+            alert('You have to add your name! -.-')
 
-        this.setState({
-            step: step - 1
-        });
+        }
+        else {
+            this.setState({
+                step: step + 1
+            });
+        }
     }
-
+    validateLetter = () => {
+        const { step } = this.state;
+        const { selectedLetter } = this.props;
+        if (selectedLetter === '') {
+            alert('-.-')
+        }
+        else {
+            this.setState({
+                step: step + 1
+            });
+        }
+    }
     handleChange = input => e => {
         this.setState({ [input]: e.target.value });
     }
@@ -97,14 +133,12 @@ class Wizard extends Component {
                     <ul className='progressbar'>
                         {this.getSteps()}
                     </ul>
-        </div>
+                </div>
                 <h2 className='Steps'>Step {step} of 3.</h2>
                 {this.showStep()}
 
             </>
         );
-
-
     }
 }
 export default Wizard;

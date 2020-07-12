@@ -2,7 +2,10 @@ import React, {Component} from 'react';
 import Button from '../components/Button';
 import {
     BrowserRouter as Router,
-	Link,
+    Link,
+    Redirect,
+    Route,
+    useHistory
   } from "react-router-dom";
 import CategoryField from '../components/CategoryField';
 
@@ -14,6 +17,7 @@ function Game({selectedLetter}) {
         food: "",
         country:"",
     });  
+    let history = useHistory();
 	const sendFlea = function (e) {
         e.preventDefault();
         return(
@@ -23,7 +27,9 @@ function Game({selectedLetter}) {
 				},
 				method: "POST",
                 body: JSON.stringify(fieldValue),
-      }));
+        })
+        .then(() => {history.push('/Results')})
+      )
   }; 
 	const handleChangeNames = function (e) {
 		editField({ ...fieldValue, names: e.target.value });
@@ -53,7 +59,9 @@ function Game({selectedLetter}) {
             <CategoryField  onChange= {handleChangeFood} value={fieldValue.food}/>
             <h3>COUNTRY: </h3> 
             <CategoryField  onChange= {handleChangeCountry} value={fieldValue.country}/>
-            <div onClick= {sendFlea} ><Link  to="/results" className="btn" ><Button  name='FLEA!'/></Link></div>
+            <div onClick= {sendFlea} >{/* <Link  to="/results" className="btn" ></Link> */}
+            <Button  name='FLEA!'/> 
+            </div>
 		</div>
     );}
     

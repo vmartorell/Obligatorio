@@ -28,9 +28,9 @@ class Step1 extends Component {
                 <ActiveBtn text= 'Animals'/>
                 <ActiveBtn text= 'Foods'/>
                 </div>
-                <button className='Next' onClick={this.continue}>
+                <div className='Next' onClick={this.continue}>
                     <Button name= 'NEXT >'/>
-                </button>
+                </div>
             </>
         );
     }

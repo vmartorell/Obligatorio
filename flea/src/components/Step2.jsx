@@ -32,14 +32,14 @@ class Step2 extends Component{
                 <div className= 'Categories'>
                     { this.buildLetterButtons() }
                 </div>
-                <div className= 'Counter'>
+{/*                 <div className= 'Counter'>
                 <Counter/>
                 <Counter/>
-                </div>
+                </div> */}
 
-                <button className='Next' onClick={this.continue}>
+                <div className='Next' onClick={this.continue}>
                     <Button name= 'NEXT >'/>
-                </button>
+                </div>
             </>
         );
     }
