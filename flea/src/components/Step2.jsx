@@ -25,7 +25,6 @@ class Step2 extends Component{
     }
 
     render() {
-/*         const {handleChange, text} = this.props; */
         return(
             <>
                 <h2>Add some details and we're ready!</h2><br/>

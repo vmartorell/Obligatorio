@@ -1,4 +1,4 @@
-//importar todo lo necesario
+//import everythig needed
 import React from 'react';
 
 function btn(text) {
@@ -9,7 +9,7 @@ function btn(text) {
     );
 }
 
-//Exportar todo lo necesario
+//Export everything needed
 export default btn;
 
 

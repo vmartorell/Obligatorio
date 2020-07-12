@@ -31,7 +31,7 @@ class App extends React.Component {
     return (
       <Router>
         <div className="App">
-          
+
           <Switch>
             <Route exact path='/'>
               <header className="App-header">
@@ -42,18 +42,18 @@ class App extends React.Component {
                 Are you ready to be the next Flea! King? <br></br>
                 Play with your friends easily and have fun.
               </p>
-              <Link to="/settings" className="btn"><Button name='PLAY!'/></Link>
+              <Link to="/settings" className="btn"><Button name='PLAY!' /></Link>
             </Route>
             <Route exact path='/settings'>
               <div className='smaller'>
                 <Logo />
-                <Wizard onChangeLetter={this.handleSaveLetter} selectedLetter={selectedLetter}/>
+                <Wizard onChangeLetter={this.handleSaveLetter} selectedLetter={selectedLetter} />
               </div>
             </Route>
             <Route exact path='/game' >
               <div className='smaller'>
                 <Logo />
-                <Game selectedLetter={selectedLetter}/>
+                <Game selectedLetter={selectedLetter} />
               </div>
             </Route>
             <Route exact path='/results' >

@@ -1,4 +1,4 @@
-//importar todo lo necesario
+//import everythig needed
 import React, { Component } from 'react';
 
 class ActiveBtn extends Component {
@@ -13,5 +13,5 @@ class ActiveBtn extends Component {
     }
 }
 
-//Exportar todo lo necesario
+//Export everything needed
 export default ActiveBtn;

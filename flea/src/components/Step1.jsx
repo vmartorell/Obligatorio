@@ -22,11 +22,11 @@ class Step1 extends Component {
                 />
                 </div>
                 <div className= 'Categories'>
-                <ActiveBtn text= 'Countries'/>
-                <ActiveBtn text= 'Colors'/>
-                <ActiveBtn text= 'Names'/>
-                <ActiveBtn text= 'Animals'/>
-                <ActiveBtn text= 'Foods'/>
+                    <ActiveBtn text= 'Countries'/>
+                    <ActiveBtn text= 'Colors'/>
+                    <ActiveBtn text= 'Names'/>
+                    <ActiveBtn text= 'Animals'/>
+                    <ActiveBtn text= 'Foods'/>
                 </div>
                 <div className='Next' onClick={this.continue}>
                     <Button name= 'NEXT >'/>

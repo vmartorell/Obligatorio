@@ -1,4 +1,4 @@
-//importar todo lo necesario
+//import everythig needed
 import React, { Component } from 'react';
 
 class Letter extends Component {
@@ -18,5 +18,5 @@ class Letter extends Component {
     }
 }
 
-//Exportar todo lo necesario
+//Export everything needed
 export default Letter;

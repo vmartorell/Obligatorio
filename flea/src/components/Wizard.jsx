@@ -29,8 +29,6 @@ class Wizard extends Component {
             //step 2
             selectedLetter: ''
             //step 3
-
-
         }
     }
 

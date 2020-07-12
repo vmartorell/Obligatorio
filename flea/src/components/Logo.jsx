@@ -1,4 +1,4 @@
-//importar todo lo necesario
+//import everythig needed
 import React from 'react';
 import FleaLogo from './images/FleaLogo.png';
 
@@ -11,5 +11,5 @@ function  logo() {
         </div>
     );
 }
-//Exportar todo lo necesario
+//Export everything needed
 export default logo;
