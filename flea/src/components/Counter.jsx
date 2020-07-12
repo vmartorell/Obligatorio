@@ -33,7 +33,7 @@ class Counter extends React.Component {
     return (
 
    <div>
-        <p>testo{this.state.count}</p>
+        <p>Rounds{this.state.count}</p>
         <button className='inc' onClick={(e) => this.increment(e)}>+</button>
         <button className='dec' onClick={(e) => this.decrement(e)}>-</button>
         <button className='reset' onClick={(e) => this.reset(e)}>Reset</button>

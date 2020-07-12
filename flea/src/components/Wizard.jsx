@@ -8,6 +8,15 @@ import {
     Route,
     Link
 } from "react-router-dom";
+//------------------------------------------------------
+/**
+ *      WIZARD LIFE CYCLE:
+ *
+ *  - Validate name is completed
+ *  - Validate a letter is selected
+ *  - Display the name
+ */
+//------------------------------------------------------
 
 class Wizard extends Component {
     constructor(props) {
@@ -18,8 +27,9 @@ class Wizard extends Component {
             //step 1
             name: '',
             //step 2
-            //step 3
             selectedLetter: ''
+            //step 3
+
 
         }
     }
@@ -35,9 +45,6 @@ class Wizard extends Component {
             case 2:
                 if (step === 2) {
                     this.validateLetter()
-                    /* this.setState({
-                          step: step + 1 
-                      });  */
                 }
             case 3:
                 if (step === 3) {

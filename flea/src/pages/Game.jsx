@@ -8,6 +8,13 @@ import {
     useHistory
   } from "react-router-dom";
 import CategoryField from '../components/CategoryField';
+//------------------------------------------------------
+/**
+ *      GAME LIFE CYCLE:
+ *
+ *  - Validate the selected letter
+ */
+//------------------------------------------------------
 
 function Game({selectedLetter}) {
     const [fieldValue, editField] = React.useState({

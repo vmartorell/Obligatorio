@@ -13,9 +13,9 @@ class Step3 extends Component {
                 <h2>Neat! Now share the link with your friends and when they´re ready, play!</h2>
                 Let's Start!
                 <h3>{name}</h3>
-                <button >
+                <div >
                     <Link to="/game" className="play"><Button name='Game!'/></Link>
-                </button>
+                </div>
 
             </>
         );
