@@ -28,14 +28,14 @@ class Step2 extends Component{
 /*         const {handleChange, text} = this.props; */
         return(
             <>
-                <h2>Add some details and we´re ready!</h2><br/>
+                <h2>Add some details and we're ready!</h2><br/>
                 <div className= 'Categories'>
                     { this.buildLetterButtons() }
                 </div>
-{/*                 <div className= 'Counter'>
-                <Counter/>
-                <Counter/>
-                </div> */}
+                <div className= 'Counter'>
+                <Counter name= 'Rounds'/>
+                <Counter  name= 'Players'/>
+                </div>
 
                 <div className='Next' onClick={this.continue}>
                     <Button name= 'NEXT >'/>

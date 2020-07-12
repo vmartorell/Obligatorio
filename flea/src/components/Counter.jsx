@@ -5,7 +5,8 @@ class Counter extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: 0
+      count: 0,
+      name:''
     };
   }
 
@@ -33,10 +34,11 @@ class Counter extends React.Component {
     return (
 
    <div>
-        <p>Rounds{this.state.count}</p>
-        <button className='inc' onClick={(e) => this.increment(e)}>+</button>
-        <button className='dec' onClick={(e) => this.decrement(e)}>-</button>
-        <button className='reset' onClick={(e) => this.reset(e)}>Reset</button>
+        <p><b>Number of {this.props.name}</b> </p>
+        <button className='inc ActiveBtn' onClick={(e) => this.increment(e)}>+</button>
+        {this.state.count}
+        <button className='dec ActiveBtn' onClick={(e) => this.decrement(e)}>-</button><br/>
+        <button className='reset ActiveBtn' onClick={(e) => this.reset(e)}>Reset</button>
   </div>
     );
   }

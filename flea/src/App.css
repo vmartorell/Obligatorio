@@ -5,7 +5,7 @@
 .Home-logo {
   /*height: 40vmin;*/
   pointer-events: none;
-  padding: 5% 0 5% 0;
+  padding: 2% 0 5% 0;
 }
 /*
 @media (prefers-reduced-motion: no-preference) {
@@ -14,7 +14,12 @@
   }
 }
 */
-*{margin: 0; padding: 0;}
+
+*{margin: 0; padding: 0; outline: none;}
+li{
+  list-style: none;
+}
+
 .App-header {
   background-color: white;
   min-height: 60vh;
@@ -33,7 +38,7 @@
   position: absolute;
   left: -30%;
   height: 40vw;
-  top: 20vh;
+  top: 16vh;
   align-items: flex-end;
 
 }
@@ -45,7 +50,7 @@
 .button{
   width:200px;
   background-color:#01FF00;
-  margin: auto;
+  margin: 20px;
   padding:10px;
   border-radius: 50px;
   font-size:15px;
@@ -157,6 +162,7 @@
 .ActiveBtn:active, .ActiveBtn.active {
   background-color:#01FF00;
 }
+
 .selectedLetter {
   margin: 40px;
     display: flex;
@@ -179,3 +185,59 @@
   }
 }
 */
+.Name{
+  width: 42%;
+  margin: auto;
+}
+.Name h3{
+  animation: name 3s 2;
+  transform: translate(0%, 0%);
+  position: relative;
+  padding: 20px;
+  text-align: left;
+}
+img.spinner, img.tick {
+  width: 45px;
+}
+.players li {
+  display: flex;
+  justify-content: left;
+}
+.players li p{
+  padding: 20px;
+}
+.gamelink{
+  margin-top: 50px;
+}
+.resultData ul li{
+  margin: 20px;
+}
+.resultData h2{
+  margin: 70px;
+}
+.Counter {
+  display: flex;
+  justify-content: center;
+}
+.Counter .inc, .Counter .dec {
+  padding: 10px 11px;
+  border: 1px solid black;
+  border-radius: 50%;
+  font-size: 10px;
+  line-height: 10px;
+  width: 40px;
+  margin: 15px;
+  height: 40px;
+}
+.Counter .reset {
+  padding: 10px;
+  border-radius: 50px;
+}
+@keyframes name{
+  30%{
+    letter-spacing: 10px;
+  }
+  85%{
+    letter-spacing: 8px;
+  }
+}
