@@ -241,3 +241,33 @@ img.spinner, img.tick {
     letter-spacing: 8px;
   }
 }
+@media (max-width: 400px){
+  .Home-logo{
+    height: 30vmin;
+  }
+  .Flea-home{
+    height: 60vw;
+    top: 30vh;
+  }
+  .App-header{
+    min-height: 30vh;
+    margin-bottom: 30vh;
+  }
+  .smaller .Home-logo {
+    height: inherit;
+    width: 40%;
+    padding: 10% 0 10% 0;
+  }
+  .smaller h3 h2{
+    padding: 0 20px;
+  }
+  .catField{
+    width: 65%;
+    height: 25px;
+    margin: 10% auto;
+    padding: 10px;
+  }
+  .Categories {
+    width: 100%;
+  }
+}
